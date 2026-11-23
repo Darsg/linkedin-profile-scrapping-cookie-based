@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Design tokens. Components use the semantic names (bg-surface, text-muted, ...),
+   never raw palette values, so theming is one place. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #f1f3f6;
+  --border: #e3e6eb;
+  --fg: #14171c;
+  --muted: #5f6875;
+  --accent: #2f5bea;
+  --accent-hover: #244bcc;
+  --accent-soft: #e9eeff;
+  --accent-fg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0f13;
+    --surface: #15181e;
+    --surface-2: #1c2028;
+    --border: #272c36;
+    --fg: #eceef2;
+    --muted: #98a1b0;
+    --accent: #6f8fff;
+    --accent-hover: #86a1ff;
+    --accent-soft: #1b2444;
+    --accent-fg: #0d0f13;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-fg: var(--accent-fg);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

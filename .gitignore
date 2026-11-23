@@ -1,0 +1,18 @@
+# env / secrets
+.env
+.env.local
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# LinkedIn browser session (contains your login cookies — never commit)
+.linkedin-session/
+# node
+node_modules/
+.next/
+out/
+# misc
+.DS_Store
